@@ -1,0 +1,1067 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="UPI-Pay — Secure digital payment and currency exchange platform."
+  >
+
+  <title>UPI-Pay | Payment & Exchange</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="#" class="logo">
+        <span class="logo-icon">U</span>
+        <span>UPI-Pay</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#exchange">Exchange</a>
+        <a href="#payments">Payments</a>
+        <a href="#features">Features</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          id="loginBtn"
+        >
+          Login
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="registerBtn"
+        >
+          Create Account
+        </button>
+      </div>
+
+      <button
+        type="button"
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       MOBILE NAVIGATION
+  ========================== -->
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#home">Home</a>
+    <a href="#exchange">Exchange</a>
+    <a href="#payments">Payments</a>
+    <a href="#features">Features</a>
+
+    <button
+      type="button"
+      class="btn btn-secondary"
+      id="mobileLoginBtn"
+    >
+      Login
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      id="mobileRegisterBtn"
+    >
+      Create Account
+    </button>
+  </div>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+
+          <div class="badge">
+            <span class="badge-dot"></span>
+            Fast • Secure • Simple
+          </div>
+
+          <h1>
+            Exchange money
+            <span>with confidence.</span>
+          </h1>
+
+          <p>
+            A modern payment and currency exchange platform
+            designed for fast transfers, transparent rates,
+            and a simple user experience.
+          </p>
+
+          <div class="hero-actions">
+
+            <button
+              type="button"
+              class="btn btn-primary btn-large"
+              id="heroRegisterBtn"
+            >
+              Get Started
+            </button>
+
+            <a
+              href="#exchange"
+              class="btn btn-secondary btn-large"
+            >
+              Calculate Exchange
+            </a>
+
+          </div>
+
+          <div class="hero-stats">
+
+            <div class="stat">
+              <strong>24/7</strong>
+              <span>Availability</span>
+            </div>
+
+            <div class="stat">
+              <strong>Fast</strong>
+              <span>Processing</span>
+            </div>
+
+            <div class="stat">
+              <strong>Secure</strong>
+              <span>Transactions</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- HERO CARD -->
+
+        <div class="hero-card">
+
+          <div class="hero-card-top">
+            <span>Exchange Preview</span>
+
+            <span class="status">
+              <span></span>
+              Live Rate
+            </span>
+          </div>
+
+          <div class="balance-preview">
+
+            <span>You send</span>
+
+            <div class="amount-row">
+              <strong id="heroFromAmount">1,000</strong>
+              <span>INR</span>
+            </div>
+
+          </div>
+
+          <div class="exchange-arrow">
+            ↓
+          </div>
+
+          <div class="balance-preview">
+
+            <span>You receive</span>
+
+            <div class="amount-row">
+              <strong id="heroToAmount">3,200</strong>
+              <span>PKR</span>
+            </div>
+
+          </div>
+
+          <div class="rate-info">
+            <span>Current rate</span>
+            <strong>1 INR = 3.20 PKR</strong>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-primary full-width"
+            id="heroExchangeBtn"
+          >
+            Start Exchange
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WALLET
+    ========================== -->
+
+    <section class="section wallet-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="eyebrow">Your account</span>
+
+            <h2>Digital wallet</h2>
+          </div>
+
+          <button
+            type="button"
+            class="btn btn-secondary"
+            id="walletLoginBtn"
+          >
+            Login to view wallet
+          </button>
+
+        </div>
+
+        <div class="wallet-grid">
+
+          <div class="wallet-card main-wallet">
+
+            <div class="wallet-card-header">
+              <span>Available Balance</span>
+
+              <span class="wallet-icon">₿</span>
+            </div>
+
+            <div class="wallet-balance">
+              <span>PKR</span>
+              <strong id="walletBalance">0.00</strong>
+            </div>
+
+            <div class="wallet-card-footer">
+              <span>Wallet ID</span>
+              <span id="walletId">Not logged in</span>
+            </div>
+
+          </div>
+
+
+          <div class="wallet-card">
+
+            <div class="wallet-small-icon deposit-icon">
+              ↓
+            </div>
+
+            <span>Deposit</span>
+
+            <strong>+ PKR 0.00</strong>
+
+            <button
+              type="button"
+              class="text-btn"
+              id="depositBtn"
+            >
+              Deposit funds →
+            </button>
+
+          </div>
+
+
+          <div class="wallet-card">
+
+            <div class="wallet-small-icon withdraw-icon">
+              ↑
+            </div>
+
+            <span>Withdraw</span>
+
+            <strong>PKR 0.00</strong>
+
+            <button
+              type="button"
+              class="text-btn"
+              id="withdrawBtn"
+            >
+              Withdraw funds →
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXCHANGE
+    ========================== -->
+
+    <section
+      class="section exchange-section"
+      id="exchange"
+    >
+
+      <div class="container exchange-layout">
+
+        <div class="exchange-info">
+
+          <span class="eyebrow">Currency exchange</span>
+
+          <h2>
+            Convert your money
+            in seconds.
+          </h2>
+
+          <p>
+            Select the currencies and enter an amount.
+            The calculator automatically shows the estimated
+            amount based on the current exchange rate.
+          </p>
+
+          <div class="exchange-features">
+
+            <div>
+              <span class="check">✓</span>
+              Transparent rates
+            </div>
+
+            <div>
+              <span class="check">✓</span>
+              Simple calculation
+            </div>
+
+            <div>
+              <span class="check">✓</span>
+              Secure account
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="exchange-card">
+
+          <div class="card-heading">
+            <div>
+              <span class="eyebrow">Calculator</span>
+              <h3>Exchange currencies</h3>
+            </div>
+
+            <span class="rate-badge">
+              1 INR = 3.20 PKR
+            </span>
+          </div>
+
+
+          <form id="exchangeForm">
+
+            <div class="currency-box">
+
+              <label for="fromAmount">
+                You send
+              </label>
+
+              <div class="currency-input">
+
+                <input
+                  type="number"
+                  id="fromAmount"
+                  value="1000"
+                  min="1"
+                  step="0.01"
+                  required
+                >
+
+                <select id="fromCurrency">
+                  <option value="INR">INR</option>
+                  <option value="PKR">PKR</option>
+                  <option value="USD">USD</option>
+                  <option value="USDT">USDT</option>
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="swap-row">
+
+              <span></span>
+
+              <button
+                type="button"
+                id="swapCurrencyBtn"
+                class="swap-btn"
+                aria-label="Swap currencies"
+              >
+                ⇅
+              </button>
+
+              <span></span>
+
+            </div>
+
+
+            <div class="currency-box">
+
+              <label for="toAmount">
+                You receive
+              </label>
+
+              <div class="currency-input">
+
+                <input
+                  type="text"
+                  id="toAmount"
+                  value="3,200.00"
+                  readonly
+                >
+
+                <select id="toCurrency">
+                  <option value="PKR">PKR</option>
+                  <option value="INR">INR</option>
+                  <option value="USD">USD</option>
+                  <option value="USDT">USDT</option>
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="exchange-summary">
+
+              <div>
+                <span>Exchange rate</span>
+                <strong id="exchangeRate">
+                  1 INR = 3.20 PKR
+                </strong>
+              </div>
+
+              <div>
+                <span>Service fee</span>
+                <strong>Included</strong>
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary full-width btn-large"
+            >
+              Continue Exchange
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PAYMENT METHODS
+    ========================== -->
+
+    <section
+      class="section payments-section"
+      id="payments"
+    >
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">Payment methods</span>
+
+          <h2>Choose how you want to pay</h2>
+
+          <p>
+            Select from available payment methods when
+            completing your transaction.
+          </p>
+
+        </div>
+
+
+        <div class="payment-grid">
+
+          <button
+            type="button"
+            class="payment-card"
+            data-payment="UPI"
+          >
+            <span class="payment-logo upi-logo">
+              U
+            </span>
+
+            <strong>UPI</strong>
+
+            <small>Indian payments</small>
+          </button>
+
+
+          <button
+            type="button"
+            class="payment-card"
+            data-payment="EasyPaisa"
+          >
+            <span class="payment-logo easypaisa-logo">
+              E
+            </span>
+
+            <strong>EasyPaisa</strong>
+
+            <small>Pakistan payments</small>
+          </button>
+
+
+          <button
+            type="button"
+            class="payment-card"
+            data-payment="JazzCash"
+          >
+            <span class="payment-logo jazzcash-logo">
+              J
+            </span>
+
+            <strong>JazzCash</strong>
+
+            <small>Pakistan payments</small>
+          </button>
+
+
+          <button
+            type="button"
+            class="payment-card"
+            data-payment="USDT"
+          >
+            <span class="payment-logo usdt-logo">
+              ₮
+            </span>
+
+            <strong>USDT</strong>
+
+            <small>Crypto payment</small>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section
+      class="section features-section"
+      id="features"
+    >
+
+      <div class="container">
+
+        <div class="section-heading centered">
+
+          <span class="eyebrow">Platform</span>
+
+          <h2>Everything in one place</h2>
+
+          <p>
+            Manage your payments, exchanges and account
+            from a single dashboard.
+          </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+          <article class="feature-card">
+
+            <div class="feature-icon">
+              ⇄
+            </div>
+
+            <h3>Fast Exchange</h3>
+
+            <p>
+              Calculate and manage currency exchanges
+              through a simple interface.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">
+              ◈
+            </div>
+
+            <h3>Secure Wallet</h3>
+
+            <p>
+              Keep track of your available balance,
+              deposits and withdrawals.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">
+              ✓
+            </div>
+
+            <h3>Transaction History</h3>
+
+            <p>
+              Review your previous deposits, withdrawals
+              and exchange transactions.
+            </p>
+
+          </article>
+
+
+          <article class="feature-card">
+
+            <div class="feature-icon">
+              ⚡
+            </div>
+
+            <h3>Simple Payments</h3>
+
+            <p>
+              Choose from the payment methods available
+              for your transaction.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta-section">
+
+      <div class="container cta-card">
+
+        <div>
+
+          <span class="eyebrow">Ready to begin?</span>
+
+          <h2>
+            Create your UPI-Pay account.
+          </h2>
+
+          <p>
+            Register to access your wallet and exchange
+            features.
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-primary btn-large"
+          id="ctaRegisterBtn"
+        >
+          Create Account
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <a href="#" class="logo">
+          <span class="logo-icon">U</span>
+          <span>UPI-Pay</span>
+        </a>
+
+        <p>
+          Digital payments and currency exchange,
+          designed simply.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+          <strong>Platform</strong>
+          <a href="#exchange">Exchange</a>
+          <a href="#payments">Payments</a>
+          <a href="#features">Features</a>
+        </div>
+
+        <div>
+          <strong>Account</strong>
+          <button type="button" id="footerLoginBtn">
+            Login
+          </button>
+          <button type="button" id="footerRegisterBtn">
+            Register
+          </button>
+        </div>
+
+        <div>
+          <strong>Legal</strong>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <span>
+        © <span id="currentYear"></span> UPI-Pay.
+        All rights reserved.
+      </span>
+
+      <span>
+        Secure payment platform
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       AUTH MODAL
+  ========================== -->
+
+  <div
+    class="modal-overlay"
+    id="authModal"
+    aria-hidden="true"
+  >
+
+    <div class="modal">
+
+      <button
+        type="button"
+        class="modal-close"
+        id="closeAuthModal"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-header">
+
+        <span class="modal-logo">U</span>
+
+        <h2 id="authTitle">
+          Welcome back
+        </h2>
+
+        <p id="authSubtitle">
+          Login to your UPI-Pay account.
+        </p>
+
+      </div>
+
+
+      <!-- LOGIN -->
+
+      <form id="loginForm" class="auth-form">
+
+        <label for="loginIdentifier">
+          Username or phone
+        </label>
+
+        <input
+          type="text"
+          id="loginIdentifier"
+          placeholder="Enter username or phone"
+          required
+        >
+
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Enter password"
+          required
+        >
+
+
+        <button
+          type="submit"
+          class="btn btn-primary full-width"
+        >
+          Login
+        </button>
+
+
+        <button
+          type="button"
+          class="form-link"
+          id="forgotPasswordBtn"
+        >
+          Forgot password?
+        </button>
+
+
+        <p class="auth-switch">
+          Don't have an account?
+
+          <button
+            type="button"
+            id="showRegisterBtn"
+          >
+            Create one
+          </button>
+        </p>
+
+      </form>
+
+
+      <!-- REGISTER -->
+
+      <form
+        id="registerForm"
+        class="auth-form hidden"
+      >
+
+        <label for="registerUsername">
+          Username
+        </label>
+
+        <input
+          type="text"
+          id="registerUsername"
+          placeholder="Choose a username"
+          required
+        >
+
+
+        <label for="registerPhone">
+          Phone number
+        </label>
+
+        <div class="phone-input">
+
+          <span>+92</span>
+
+          <input
+            type="tel"
+            id="registerPhone"
+            placeholder="3001234567"
+            inputmode="numeric"
+            required
+          >
+
+        </div>
+
+
+        <label for="registerPassword">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="registerPassword"
+          placeholder="Create a password"
+          required
+        >
+
+
+        <label for="registerConfirmPassword">
+          Confirm password
+        </label>
+
+        <input
+          type="password"
+          id="registerConfirmPassword"
+          placeholder="Confirm your password"
+          required
+        >
+
+
+        <label class="checkbox-label">
+
+          <input
+            type="checkbox"
+            id="acceptTerms"
+            required
+          >
+
+          <span>
+            I agree to the Terms and Privacy Policy.
+          </span>
+
+        </label>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary full-width"
+        >
+          Create Account
+        </button>
+
+
+        <p class="auth-switch">
+          Already have an account?
+
+          <button
+            type="button"
+            id="showLoginBtn"
+          >
+            Login
+          </button>
+        </p>
+
+      </form>
+
+
+      <!-- FORGOT PASSWORD -->
+
+      <form
+        id="forgotForm"
+        class="auth-form hidden"
+      >
+
+        <p class="form-description">
+          Enter your username or phone number and we'll
+          guide you through the password recovery process.
+        </p>
+
+        <label for="forgotIdentifier">
+          Username or phone
+        </label>
+
+        <input
+          type="text"
+          id="forgotIdentifier"
+          placeholder="Enter username or phone"
+          required
+        >
+
+
+        <button
+          type="submit"
+          class="btn btn-primary full-width"
+        >
+          Continue
+        </button>
+
+
+        <button
+          type="button"
+          class="form-link"
+          id="backToLoginBtn"
+        >
+          ← Back to login
+        </button>
+
+      </form>
+
+
+      <div
+        class="auth-message"
+        id="authMessage"
+        aria-live="polite"
+      ></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       NOTIFICATION
+  ========================== -->
+
+  <div
+    class="toast"
+    id="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="app.js"></script>
+
+</body>
+</html>
+```
